@@ -19,6 +19,5 @@
       		</tr>
       	</table>
       </form>
-      <?php echo $mensaje; ?>
 </body>
 </html>
