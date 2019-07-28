@@ -1,0 +1,471 @@
+
+
+/* ESTILOS DE LA FUENTE*/
+@font-face{
+    src: url("fuentes\letra.otf");
+    font-family: letra;
+}
+/*  */
+
+
+
+
+
+
+/*ESTILOS DEL HEADER*/
+
+#body{
+    background-color: #60BF9E;
+    width: auto;
+    height: auto;
+}
+
+#header{
+    background-color: #252932;
+    width: 100%;
+    height: 150px;
+    max-height: auto;
+    color: white;
+}
+
+#logo{
+    font-size: 35px;
+    font-family: letra;
+}
+
+#nav{
+    font-family: "open sans";
+    font-size: 22px;
+    color: white;
+}
+
+
+#logo > a{
+    text-decoration: none;
+    color: white;
+} 
+
+#nav > div > a{
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+}
+
+#nav > div > a:hover{
+    background-color:#60bf9f;
+    border-radius:50px;
+    transition: all .3s;
+    }
+
+/**/
+
+
+
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 400px;
+}
+#demo{
+    position: relative;
+    margin-top: 200px;   
+}
+
+
+
+
+/*ESTILOS DEL MENU SECUNDARIO*/
+
+#menu{
+    color: #60BF9E;
+    background-color: white;
+    width: 100%;
+    margin-top: 150px;
+    height: auto;
+    max-height: auto;
+
+}
+
+#menu div a{
+    color: #60BF9E;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    font-family: "open sans";
+}
+
+#menu div a:hover{
+    color: black;
+}
+
+
+#menu2{
+    width: 100%;
+    height: auto;
+    background-color: #60bf9f;
+    margin-top: 145px;  
+   
+    
+
+}
+
+/**/
+
+
+
+
+
+
+
+
+/*ESTILOS DEL ARTICLE*/
+
+article{
+    width: 100%;
+    background-color: #252932;
+    color: white;
+    margin-top: 20px;
+    height: auto;
+
+}
+
+.titulo1{
+    margin-top: 60px;
+    font-family: letra;
+    font-size: 65px;   
+    
+    
+}
+
+
+#titulo2{
+    line-height: 10px;
+}
+
+#parrafo{
+    margin-top: 60px;
+    text-align: justify;
+    font-size: 27px;
+    font-family: letra;
+    margin-block-end: 60px;
+
+}
+
+#cont-formulario{
+    
+    
+    margin-top: 40px;
+    height: auto;
+
+}
+
+/**/
+
+
+
+
+
+
+
+
+/*ESTILOS PARA EL FORMILARIO*/
+
+
+#formulario{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(17, 39, 32, 0.644);
+    height: auto;
+    
+}
+
+#contacto{
+    margin-top: 40px;
+    color: white;
+    font-size: 40px;
+    margin-block-end: 40px;
+}
+
+.datos{
+    color: #60BF9E;
+    font-family: letra;
+    font-size: 20px;
+}
+
+#apellidos{
+    background-color: rgba(26, 25, 25, 0.842);
+    color: white;
+}
+
+#nombre{
+    background-color: rgba(26, 25, 25, 0.842);
+    color: white;
+}
+
+#email{
+    background-color: rgba(26, 25, 25, 0.815);
+    color: white;
+}
+
+#mensaje{
+    background-color: rgba(26, 25, 25, 0.815);
+    color: white;
+}
+
+/**/
+
+
+
+
+
+
+
+
+/*ESTILOS DEL FOOTER*/
+
+footer{
+    margin-top: 40px;
+    background-color: #252932;
+    height: 200px;
+    color: black;
+    line-height: 40px;
+    font-family: letra;
+    text-align: center;
+}
+#encabezado{
+    font-size: 40px;
+}
+#encabezado2{
+    font-size: 26px;
+}
+
+#encabezado3{
+    font-size: 20px;
+}
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+/*ESTILOS PARA HACER EL TAMAÑO DE LOS ELEMENTOS DEL ARTICLE RESPONSIVE*/
+
+@media only screen and (max-width: 700px){
+    .titulo1{
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .titulo1{
+        font-size: 45px;
+        line-height: none;
+    }
+    #parrafo{
+        text-align: left;
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .titulo1{
+        font-size: 40px;
+        line-height: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 480px){
+    .titulo1{
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+
+    #titulo2{
+        line-height: 30px;
+    }
+
+    #parrafo{
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+/*  */
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+    #encabezado{
+        font-size: 35px;
+
+    }
+    #encabezado2{
+        font-size: 22px;
+        
+
+    }
+    #encabezado3{
+
+        font-size: 16px;
+
+    }
+
+
+    
+}
+
+@media only screen and (max-width: 450px){
+
+
+    footer{
+        height: 250px;
+    }
+
+
+
+    #encabezado{
+        font-size: 24px;
+        line-height: 10px;
+        
+
+    }
+    #encabezado2{
+        font-size: 16px;
+        line-height: 10px
+
+    }
+    #encabezado3{
+
+        font-size: 12px;
+
+    }
+
+
+    
+}
+
+@media only screen and (max-width: 300px){
+    #encabezado{
+        font-size: 24px;
+        line-height: 22px;
+
+    }
+    #encabezado2{
+        font-size: 14px;
+        line-height: 10px;
+
+    }
+    #encabezado3{
+
+        font-size: 12px;
+
+    }
+
+
+    
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+    #menu{
+        color: #60BF9E;
+        background-color: white;
+        width: 0px;
+        
+        height: 0px;
+        max-height: auto;
+    }
+
+    #menu div a{
+        color: none;
+        text-decoration: none;
+        font-size: 0px;
+        padding: 0px;
+        font-family: "open sans";
+    }
+    
+    #menu div a:hover{
+        color: none;
+    }
+
+
+    
+}
+
+
+@media only screen and (max-width: 550px){
+
+    #logo{
+        font-size: 30px;
+        font-family: letra;
+    }
+
+    #nav > div > a{
+        text-decoration: none;
+        color: white;
+        padding: 8px 10px;
+    }
+
+    
+    #nav{
+    font-family: "open sans";
+    font-size: 18px;
+    color: white;
+}
+    
+    
+
+}
+
+
+@media only screen and (max-width: 450px){
+
+    #logo{
+        font-size: 26px;
+        font-family: letra;
+        text-align: center;
+}
+
+}
+
+
+
+@media only screen and (max-width: 450px){
+    #contacto{
+        font-size: 28px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px){
+    #demo{
+        margin-top: 170px
+    }
+}
+/**/
+
