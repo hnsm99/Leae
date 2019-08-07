@@ -38,18 +38,14 @@
             <div  class="d-flex align-items-center">
                 <a href="..." target="blank_">Metodología</a>
             </div>
-            <div class="d-flex align-items-start">
-                <a href="..." target="blank_">Curso</a>
-            </div>
+            
             <div class="d-flex align-items-center">
                 <a href="..." target="blank_">Units</a>
             </div>
             <div class="d-flex align-items-center">
                 <a href="..." target="blank_">Games</a>
             </div>
-            <div class="d-flex align-items-center">
-                <a href="..." target="blank_">Avance</a>
-            </div>
+            
         </div>
      </div>
 

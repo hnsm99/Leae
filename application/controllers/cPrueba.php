@@ -102,21 +102,11 @@ class cPrueba extends CI_Controller
 	public function getopic($idnivel,$idtema){
 		$idNivel=$this->desencriptarid($idnivel);
 		$idTema=$this->desencriptarid($idtema);
-
-		$subtemas=array('subtemas' =>$this->mPrueba->getsubTemas($idTema),'IdNivel'=>$idNivel);
-		if(count($subtemas['subtemas'])>0){
-		$sub = array('subtema' =>$this->mPrueba->getsubTemas($idTema),'idNivel'=>$idNivel);
-		$this->load->view ('Users/layout/header');
-		$this->load->view ('Users/layout/menu');
-		$this->load->view ('Users/prueba/explanation', $sub);
-		$this->load->view ('Users/layout/footer');
-		}else{
 		$Temas = array('tema' =>$this->mPrueba->getema($idTema),'idNivel'=>$idNivel);
 		$this->load->view ('Users/layout/header');
 		$this->load->view ('Users/layout/menu');
 		$this->load->view ('Users/prueba/explanation', $Temas);
 		$this->load->view ('Users/layout/footer');
-		}
 	}
 	public function desencriptarid($id){
 		return $id=base64_decode($id);

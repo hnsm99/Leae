@@ -64,16 +64,16 @@ public function getLevels(){
 
 public function gettemas($id){
   $query=$this->db->query("select * from tbl_tema where idNivel=".$id."");
-  return$query->result();
+  return $query->result();
 }
 
 public function getema($id){
- $query=$this->db->query("select * from tbl_tema where idTema=".$id."");
-  return$query->result(); 
+ $query=$this->db->query("select * from tbl_tema where idTema=1");
+  return $query->result();
 }
 
 public function getsubTemas($id){
   $query=$this->db->query("select * from tbl_subTema where idTema=".$id."");
-  return$query->result();
+  return $query->result();
 }
 }
