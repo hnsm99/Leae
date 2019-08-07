@@ -108,7 +108,56 @@ class cPrueba extends CI_Controller
 		$this->load->view ('Users/prueba/explanation', $Temas);
 		$this->load->view ('Users/layout/footer');
 	}
+
+	public function getCuestionario($idtema){
+		$idTema=$this->desencriptarid($idtema);
+		$Preguntas=[];	
+		$Respuestas=[];
+		$validacion=$this->mPrueba->valTemas($idTema,$this->session->userdata('s_idusuario'));
+		if($validacion>0){
+			$nivel= $this->mPrueba->getema($idTema);
+			$Nivel=0;
+			foreach ($nivel as $n) {
+				$Nivel=$n->idNivel;
+			}
+			redirect("".base_url()."cPrueba/topicDinamicos/".base64_encode($Nivel)."");
+		}else{
+			$Preguntas = array('preguntas' =>$this->mPrueba->getPregunta($idTema),'video'=>"https://www.youtube.com/watch?v=C2fuzNN6CP4&feature=youtu.be&t=25");
+		foreach ($Preguntas["preguntas"] as $pregunta) {
+			array_push($Respuestas,$this->mPrueba->getanswers($pregunta->idPregunta));
+		}
+		$respuesta = array('Answers' =>$Respuestas,"Tema"=>$idTema);
+		$array_resultante=array_merge($Preguntas,$respuesta);
+		$this->load->view ('Users/layout/header');
+		$this->load->view ('Users/layout/menu');
+		$this->load->view ('Users/prueba/cuestionario',$array_resultante);
+		$this->load->view ('Users/layout/footer');
+		}
+	}
 	public function desencriptarid($id){
 		return $id=base64_decode($id);
+	}
+
+	public function valideQuestion($id){
+		$puntaje=0;
+		$Preguntas = array('preguntas' =>$this->mPrueba->getPregunta($id));
+		foreach ($Preguntas["preguntas"] as $key) {
+			$respuesta=$_POST["".$key->idPregunta.""];
+			$correcta = $this->mPrueba->correct($key->idPregunta);
+			foreach ($correcta as $correct) {
+				if($respuesta==$correct->idRespuesta){
+					$puntaje+=$key->puntaje;
+				}
+			}
+		}
+		$inser=$this->mPrueba->guardarpuntaje($id,$puntaje,$this->session->userdata('s_idusuario'));
+		if($inser>0){
+			$nivel= $this->mPrueba->getema($id);
+			$Nivel=0;
+			foreach ($nivel as $n) {
+				$Nivel=$n->idNivel;
+			}
+			redirect("".base_url()."cPrueba/topicDinamicos/".base64_encode($Nivel)."");
+		}
 	}
 }

@@ -68,12 +68,43 @@ public function gettemas($id){
 }
 
 public function getema($id){
- $query=$this->db->query("select * from tbl_tema where idTema=1");
+ $query=$this->db->query("select * from tbl_tema where idTema=".$id."");
   return $query->result();
 }
 
 public function getsubTemas($id){
   $query=$this->db->query("select * from tbl_subTema where idTema=".$id."");
   return $query->result();
+}
+
+public function getPreguntaTema($id){
+$query=$this->db->query("select * from tbl_tema_pregunta where idTema=".$id."");
+  return $query->result();
+}
+public function getPregunta($id){
+ $query=$this->db->query("select tblp.pregunta as Pregunta, tbltmp.idTema, tblp.idPregunta idPregunta, tblp.puntaje FROM tbl_pregunta tblp INNER JOIN tbl_tema_pregunta tbltmp ON tblp.idPregunta=tbltmp.idPregunta WHERE tbltmp.idTema=".$id." ANd tblp.estado=1");
+  return $query->result(); 
+}
+public function getanswers($id){
+ $query=$this->db->query("select * from tbl_respuesta where idPregunta=".$id."");
+  return $query->result(); 
+}
+public function correct($id){
+ $query=$this->db->query("SELECt tbl_respuesta.idRespuesta FROM tbl_respuesta WHERE tbl_respuesta.idPregunta=".$id." AND tbl_respuesta.correcta=1");
+  return $query->result();  
+}
+public function guardarpuntaje($id,$puntaje,$idusuario){
+  $campo=array(
+         'idTema'=>$id,
+         'idUsuario'=>$idusuario,
+         'puntajeObtenido'=>$puntaje
+    );
+    $this->db->insert('tbl_tema_usuario_pregunta',$campo);
+
+    return $this->db->insert_id();
+}
+public function valTemas($idtema, $idUsuario){
+  $query=$this->db->query("SELECt * FROM tbl_tema_usuario_pregunta WHERE tbl_tema_usuario_pregunta.idTema=".$idtema." and tbl_tema_usuario_pregunta.idUsuario=".$idUsuario."");
+  return $query->num_rows();  
 }
 }
