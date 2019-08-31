@@ -107,4 +107,8 @@ public function valTemas($idtema, $idUsuario){
   $query=$this->db->query("SELECt * FROM tbl_tema_usuario_pregunta WHERE tbl_tema_usuario_pregunta.idTema=".$idtema." and tbl_tema_usuario_pregunta.idUsuario=".$idUsuario."");
   return $query->num_rows();  
 }
+public function getgames(){
+  $query=$this->db->query("SELECt tbl_tema.nombre,tbl_tema.urlJuego FROM `tbl_tema`");
+  return $query->result();
+}
 }

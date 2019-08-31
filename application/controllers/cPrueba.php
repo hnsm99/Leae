@@ -160,4 +160,34 @@ class cPrueba extends CI_Controller
 			redirect("".base_url()."cPrueba/topicDinamicos/".base64_encode($Nivel)."");
 		}
 	}
+	public function getgames(){
+		
+		$Juegos = array('Juegos' =>$this->mPrueba->getgames());
+		$this->load->view ('Users/layout/header');
+		$this->load->view ('Users/layout/menu');
+		$this->load->view ('Users/prueba/games', $Juegos);
+		$this->load->view ('Users/layout/footer');
+	}
+	public function metodologia(){
+
+		$this->load->view ('Users/layout/header');
+		$this->load->view ('Users/layout/menu');
+		$this->load->view ('Users/prueba/metodologia');
+		$this->load->view ('Users/layout/footer');
+	}
+	public function nosotros(){
+		$this->load->view ('Users/layout/header');
+		$this->load->view ('Users/layout/menu');
+		$this->load->view ('Users/prueba/nosotros');
+		$this->load->view ('Users/layout/footer');
+	}
+	public function curso (){
+		$this->load->view ('Users/layout/header');
+		$this->load->view ('Users/layout/menu');
+		$this->load->view ('Users/prueba/curso');
+		$this->load->view ('Users/layout/footer');
+	}
+
 }
+
+

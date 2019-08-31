@@ -4,8 +4,13 @@
 
         <!-- Logo -->
         <div id="logo" class="d-flex justify-content-center col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12" >
+          <img width="100" height="100" src="<?php base_url()?>assets/imagenes/Logo.jpeg"></img> 
+                
                 <a href="<?php base_url()?>cHome"> Learn English Anyway Enws</a>
+                
+                </div>
         </div>
+
         <!--  -->
 
 
@@ -13,14 +18,14 @@
         <div id="nav" class="d-flex flex-row justify-content-around col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
           <?php if($this->session->userdata('s_usuario')!=null){?>
             <div>
-                  <a  href="<?php echo base_url(); ?>cHome/LogOut">Cerrar Sesión</a> 
+                  <a  href="<?php echo base_url(); ?>cHome/LogOut"> Sign off</a> 
             </div>
           <?php } else{ ?>
             <div>
-                  <a  href="<?php echo base_url(); ?>Clogin">Iniciar Sesión</a> 
+                  <a  href="<?php echo base_url(); ?>Clogin">Log in</a> 
             </div>
             <div class="d-none d-md-block ">
-                   <a class="hidden-sm " href="<?php echo base_url(); ?>Cregister">Registrarse</a>
+                   <a class="hidden-sm " href="<?php echo base_url(); ?>Cregister">Sing in</a>
             </div>            
           <?php } ?>            
         </div>
@@ -36,14 +41,15 @@
      
         <div class="d-flex flex-row flex-nowrap justify-content-around align-items-center col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
             <div  class="d-flex align-items-center">
-                <a href="..." target="blank_">Metodología</a>
+                <a href="<?php echo base_url()?>cPrueba/metodologia" target="blank_">
+Methodology</a>
             </div>
             
             <div class="d-flex align-items-center">
-                <a href="..." target="blank_">Units</a>
+                <a href="<?php echo base_url()?>cPrueba/UnitsDinamica">Units</a>
             </div>
             <div class="d-flex align-items-center">
-                <a href="..." target="blank_">Games</a>
+                <a href="<?php echo base_url()?>cPrueba/getgames" >Games</a>
             </div>
             
         </div>
@@ -67,19 +73,19 @@
               <!-- Links -->
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#"> Metodología <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#"> Menu <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Curso</a>
+                  <a class="nav-link" href="<?php echo base_url()?>cPrueba/metodologia">Methodology</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Units</a>
+                  <a class="nav-link" href="<?php echo base_url()?>cPrueba/UnitsDinamica">Units</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">Games</a>
+                  <a class="nav-link" href="<?php echo base_url()?>cPrueba/getgames">Games</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">Avance</a>
+                  <a class="nav-link" href=""></a>
                 </li>
               </ul>
               <!-- Links -->
@@ -95,16 +101,17 @@
      
         <div class="d-flex flex-row flex-nowrap justify-content-around align-items-center col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
             <div  class="d-flex align-items-center">
-                <a href="..." target="blank_">Inicio</a>
+                <a href="..." target="blank_"></a>
             </div>
             <div class="d-flex align-items-start">
-                <a href="..." target="blank_">Nosotros</a>
+                <a href="<?php echo base_url()?>cPrueba/nosotros" target="blank_">About us</a>
             </div>
             <div class="d-flex align-items-center">
-                <a href="..." target="blank_">Curso de inglés(A1)</a>
+                <a href="<?php echo base_url()?>cPrueba/curso" target="blank_">English course (A1)
+</a>
             </div>
             <div class="d-flex align-items-center">
-                <a href="..." target="blank_">Contacto</a>
+                <a href="contacto">Contact</a>
             </div>
         
         </div>
@@ -128,16 +135,16 @@
               <!-- Links -->
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#"> INICO <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">  <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">NOSOTROS</a>
+                  <a class="nav-link" href="<?php echo base_url()?>cPrueba/nosotros">Abaout us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">CURSO DE INGLES A1</a>
+                  <a class="nav-link" href="<?php echo base_url()?>cPrueba/curso">English course (A1)</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">CONTACTO</a>
+                  <a class="nav-link" href="">Contact</a>
                 </li>
               </ul>
               <!-- Links -->
