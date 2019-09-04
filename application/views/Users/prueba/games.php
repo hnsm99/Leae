@@ -6,12 +6,9 @@
         <div class="icon">0<?php echo $i?></div>
         <div class="content">
           <h1>Game 0<?php echo $i?></h1>
-     
           <h4><?php echo $Games->nombre?></h4>
-          
             <br>
-      
-              <a class="b" href="<?php $Games->urlJuego ?>">Empezar</a>
+              <a class="b" target="_blank" href="<?php echo $Games->urlJuego ?>">Empezar</a>
         </div>
       </div>
       <?php } ?>
