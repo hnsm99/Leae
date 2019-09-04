@@ -4,7 +4,7 @@
 
         <!-- Logo -->
         <div id="logo" class="d-flex justify-content-center col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12" >
-          <img width="100" height="100" src="<?php base_url()?>assets/imagenes/Logo.jpeg"></img> 
+          <img width="100" height="100" src="<?php echo base_url();?>assets/imagenes/Logo.jpeg"></img> 
                 
                 <a href="<?php base_url()?>cHome"> Learn English Anyway Enws</a>
                 
