@@ -26,7 +26,7 @@ class Clogin extends CI_Controller
 		if ($res==1) {
 			redirect(base_url()."cAdmin/index");
 		}else if($res==2){	
-			redirect(base_url()."cUser/index");
+			redirect(base_url()."cPrueba/UnitsDinamica");
 		}else{
 			$this->session->set_flashdata('Mensaje', 'Correo y/o Contraseña Incorrecta');
 			redirect(base_url()."Clogin/index");

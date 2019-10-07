@@ -23,7 +23,7 @@
           <?php } ?>
         <?php } ?>
         <?php } ?>
-              <a class="b" href="<?php echo base_url(); ?>cPrueba/topicDinamicos/<?php echo base64_encode($level->Nivel)?>">Empezar</a>
+              <a class="b" href="<?php echo base_url(); ?>cPrueba/topicDinamicos/<?php echo base64_encode($level->Nivel)?>">Start</a>
         </div>
       </div>
       <?php } ?>

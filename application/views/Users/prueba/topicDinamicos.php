@@ -19,8 +19,8 @@
           <br>
           <br>
           <br>
-          <a class="b" href="<?php echo base_url(); ?>cPrueba/getopic/<?php echo base64_encode($idNivel)?>/<?php echo base64_encode($topic->idTema)?>">Empezar</a>
-          <a class="b" href="<?php echo $topic->urlJuego?>" target="_blank">Empezar Juego(Opcional)</a>
+          <a class="b" href="<?php echo base_url(); ?>cPrueba/getopic/<?php echo base64_encode($idNivel)?>/<?php echo base64_encode($topic->idTema)?>">Start</a>
+          
         </div>
         </div>
         <?php } ?>

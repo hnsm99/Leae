@@ -18,7 +18,7 @@ class cHome extends CI_Controller
 	}
 
 	public function LogOut(){
-		$res=$this->session->sess_destroy();
+		$res=$this->session->sess_destroy();	
 		if(is_null($res)){
 			redirect(base_url()."cHome/index");
 		}
